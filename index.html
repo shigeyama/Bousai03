@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Bousai</title>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      UnityLoader.instantiate("unityContainer", "Build/BousaiApp.json");
+    </script>
+    <link rel="stylesheet" href="Build/style.css" type="text/css">
+  </head>
+  <body>
+
+    <div id="mobile"></div>
+    <script>
+    var div = document.getElementById('mobile');
+    if (navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)){
+      var mobileHight = window.outerHeight;
+      div.innerHTML = '<center><div id="unityContainer" style="width: 100vw; height: 'mobileHight'; margin: auto"></div></center>';
+    }
+    else {
+      div.innerHTML = '<center><div id="unityContainer" style="width: 360px; height: 640px; margin: auto"></div></center>';
+    }
+    </script>
+  </body>
+</html>
