@@ -16,8 +16,10 @@
     <script>
     var div = document.getElementById('mobile');
     if (navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)){
-      var mobileHight = document.getElementById('mobile').style.height;
-      div.innerHTML = '<center><div id="unityContainer" style="width: 100vw; height: 'mobileHight'; margin: auto"></div></center>';
+      //var mobileHeight = document.getElementById('mobile').style.height;
+      var mobileHeight = $('mobile').height;
+
+      div.innerHTML = '<center><div id="unityContainer" style="width: 100vw; height: 'mobileHeight'; margin: auto"></div></center>';
     }
     else {
       div.innerHTML = '<center><div id="unityContainer" style="width: 360px; height: 640px; margin: auto"></div></center>';
