@@ -11,17 +11,16 @@
     <link rel="stylesheet" href="Build/style.css" type="text/css">
   </head>
   <body>
-
     <div id="mobile"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
     var div = document.getElementById('mobile');
     if (navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)){
       //var mobileHeight = document.getElementById('mobile').style.height;
-      //var mobileHeight = $('mobile').height();
-      div.innerHTML = '<center><div id="unityContainer" style="width: 100vw; height: 80vh; margin: auto"></div></center>';
+      var mobileHeight = $('mobile').height();
+      div.innerHTML = '<center><div id="unityContainer" style="width: 100vw; height: 'mobileHeight'; margin: auto"></div></center>';
     }
     else {
-      //var mobileHeight2 = $('mobile').height();
       div.innerHTML = '<center><div id="unityContainer" style="width: 360px; height: 640px; margin: auto"></div></center>';
     }
     </script>
