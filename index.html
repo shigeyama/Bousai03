@@ -17,7 +17,8 @@
     var div = document.getElementById('mobile');
     if (navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)){
       var mobileHeight = $(window).height();
-      var tempData = '<center><div id="unityContainer" style="width: 100vw; height: '+mobileHeight+'px; margin: auto"></div></center>'
+      var mobileWidth = $(window).width();
+      var tempData = '<center><div id="unityContainer" style="width: '+mobileWidth+'px; height: '+mobileHeight+'px; margin: auto"></div></center>'
       div.innerHTML = tempData;
     }
     else {
