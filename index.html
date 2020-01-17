@@ -11,14 +11,14 @@
     <link rel="stylesheet" href="Build/style.css" type="text/css">
   </head>
   <body>
-    <div id="mobile"></div>
+    <div id="mobile" class="cover"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
     var div = document.getElementById('mobile');
     if (navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)){
-      var mobileHeight = $('mobile').height();
-      $('mobile').height('mobileHeight');
-      div.innerHTML = '<center><div id="unityContainer" style="width: 100vw; margin: auto"></div></center>';
+      var mobileHeight = $(window).height();
+      var tempData = '<center><div id="unityContainer" style="width: 100vw; height: '+mobileHeight+'px; margin: auto"></div></center>'
+      div.innerHTML = tempData;
     }
     else {
       div.innerHTML = '<center><div id="unityContainer" style="width: 360px; height: 640px; margin: auto"></div></center>';
