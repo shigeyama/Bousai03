@@ -17,7 +17,7 @@
     var div = document.getElementById('mobile');
     if (navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)){
       //var mobileHeight = document.getElementById('mobile').style.height;
-      var mobileHeight = $('mobile').height();
+      var mobileHeight = $('mobile').outerHeight();
       div.innerHTML = '<center><div id="unityContainer" style="width: 100vw; height: 'mobileHeight'; margin: auto"></div></center>';
     }
     else {
